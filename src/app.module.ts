@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CoffeesModule } from './coffees';
+import { CoffeeRatingModule } from './coffee-rating';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { CoffeesModule } from './coffees';
       autoLoadEntities: true,
       logging: true,
     }),
+    CoffeeRatingModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -7,11 +7,4 @@ services:
     environment:
       POSTGRES_PASSWORD: db1234
 
-  app:
-    build: .
-    ports:
-      - '3000:3000'
-    depends_on:
-      - db
-    links:
-      - db
+  
